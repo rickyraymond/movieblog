@@ -8,6 +8,7 @@ const WORDPRESS_API_URL = 'https://cinesanity.wordpress.com/wp-json/wp/v2/posts'
 
 export async function fetchPosts(page = 1): Promise<Post[]> {
   const response = await fetch(`${WORDPRESS_API_URL}?per_page=6&page=${page}`);
+  console.log(response);
   const posts: Post[] = await response.json();
   return posts.map(post => ({
       id: post.id.toString(),

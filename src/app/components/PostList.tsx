@@ -1,4 +1,5 @@
 // components/PostList.jsx
+'use client'
 import React, { useState, useEffect } from 'react';
 import { Post } from '../types/Post';
 

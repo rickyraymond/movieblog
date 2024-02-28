@@ -1,5 +1,3 @@
-'use client'
-
 import { GetStaticProps } from 'next';
 import { fetchPosts } from '../lib/wp';
 import { Post } from '../types/Post';
@@ -11,6 +9,7 @@ interface HomeProps {
 
 export const getStaticProps: GetStaticProps = async () => {
     const initialPosts = await fetchPosts();
+    console.log(initialPosts);
     return {
         props: {
             initialPosts,
